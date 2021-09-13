@@ -14,7 +14,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * ]) => 3`
  *
  */
-export default function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function countCats(arr) {
+  if (arr.length == 0 || JSON.stringify(arr).match(/\"\^\^\"/g) == null) return 0; 
+  return JSON.stringify(arr).match(/\"\^\^\"/g).length;
 }
